@@ -297,7 +297,7 @@ pub struct InboxGetConversationsRequestDto {
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct InboxConversationSummaryDto {
-    #[serde(rename = "id")]  
+    #[serde(rename = "id")]
     pub conversation_id: String,
     pub linked_in_account_id: u32,
     pub lead_profile_url: Option<String>,
@@ -320,7 +320,7 @@ pub struct InboxSendMessageRequestDto {
     pub message: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub subject: Option<String>,
-    #[serde(rename = "id")]  
+    #[serde(rename = "id")]
     pub conversation_id: String,
     pub linked_in_account_id: u32,
 }
@@ -354,7 +354,6 @@ pub struct LiAccountSummaryDto {
     #[serde(default)]
     pub is_valid_recruiter: bool,
 }
-
 
 // ✅ FIXED: API returns {totalCount, items}, NOT {page, items}
 #[derive(Debug, Deserialize)]

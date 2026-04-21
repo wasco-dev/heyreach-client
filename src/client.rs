@@ -608,7 +608,6 @@ pub fn li_account_get_all(
     })
 }
 
-
 // -------- Webhooks --------
 
 pub fn webhooks_create(api_key: &str, request: CreateWebhookRequest) -> Result<Webhook, ApiError> {
