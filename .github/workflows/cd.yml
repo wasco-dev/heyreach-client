@@ -63,6 +63,5 @@ jobs:
 
           for file in **/Cargo.toml; do
             directory=$(dirname "$file")
-            cargo build --target wasm32-wasip2 --manifest-path $file
             wash oci push ${{ env.REGISTRY }}/$(sed -n "s/package wasco-dev:\\([a-z-]*\\)@\\([0-9]\.[0-9]\.[0-9]\\);/wasco-dev\/\1:\2/p" $directory/wit/world.wit) $directory/*.wasm
           done
