@@ -4,6 +4,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+#[allow(dead_code)]
 pub struct PageInfoDto {
     pub offset: u32,
     pub limit: u32,

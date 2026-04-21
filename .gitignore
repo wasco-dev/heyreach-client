@@ -1,13 +1,2 @@
-# Rust build artifacts
-target/debug
-target/flycheck0
-target/release
-target/wasm32-wasip2/release/.fingerprint
-target/wasm32-wasip2/release/build
-target/wasm32-wasip2/release/deps
-
-
-
-
-# Wash build artifacts
-
+target/
+build/
