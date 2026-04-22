@@ -2,11 +2,9 @@ mod client;
 mod http;
 mod models;
 
-use exports::wasco_dev::heyreach::api::*;
+use exports::wasco_dev::heyreach_api::heyreach_api::*;
 
 wit_bindgen::generate!({
-    world: "heyreach-client",
-    path: "wit",
     generate_all,
 });
 

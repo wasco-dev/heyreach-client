@@ -1,4 +1,4 @@
-use crate::exports::wasco_dev::heyreach::api::{ApiError, ApiErrorCode};
+use crate::exports::wasco_dev::heyreach_api::heyreach_api::{ApiError, ApiErrorCode};
 use crate::wasi::http::outgoing_handler;
 use crate::wasi::http::types::*;
 use crate::wasi::io::streams::StreamError;

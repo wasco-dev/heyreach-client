@@ -1,10 +1,10 @@
-package wasco-dev:heyreach@0.1.0;
+package wasco-dev:heyreach-api@0.1.0;
 
 /// ------------------------
 /// Main client interface
 /// ------------------------
 
-interface api {
+interface heyreach-api {
 
     /// Generic error mapping the common HTTP errors from the HeyReach API.
     enum api-error-code {
@@ -508,7 +508,7 @@ interface api {
 }
 
 /// World exporting the single client interface.
-world heyreach-client {
+world main {
   import wasi:http/outgoing-handler@0.2.2;
-  export api;
+  export heyreach-api;
 }

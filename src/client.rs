@@ -1,4 +1,4 @@
-use crate::exports::wasco_dev::heyreach::api::*;
+use crate::exports::wasco_dev::heyreach_api::heyreach_api::*;
 use crate::http::{make_request, make_request_empty, HttpMethod};
 use crate::models::*;
 

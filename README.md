@@ -5,7 +5,7 @@ A complete WebAssembly implementation of the HeyReach API client for `wasm32-was
 ## Project Structure
 
 ```
-heyreach-client/
+heyreach-api/
 ├── Cargo.toml
 ├── wit/
 │   └── world.wit
@@ -45,12 +45,12 @@ cargo build --target wasm32-wasip2 --release
 ```
 
 The compiled WASM component will be in:
-- `target/wasm32-wasip2/release/heyreach_client.wasm` (standard build)
-- `target/wasm32-wasip2/release/heyreach_client.wasm` (component build)
+- `target/wasm32-wasip2/release/heyreach_api.wasm` (standard build)
+- `target/wasm32-wasip2/release/heyreach_api.wasm` (component build)
 
 ## Features
 
-This client implements the complete HeyReach API including:
+This WebAssembly component implements the complete HeyReach API including:
 
 ### Authentication
 - ✅ Check API key validity
@@ -89,7 +89,7 @@ This client implements the complete HeyReach API including:
 
 ## Usage Example
 
-The component exports the `heyreach:client/api` interface. Here's how you might use it:
+The component exports the `wasco-dev:heyreach-api/api` interface. Here's how you might use it:
 
 ```rust
 // Check API key
@@ -169,7 +169,7 @@ To test the component, you'll need a WASI runtime that supports WASI Preview 2 a
 
 Example with wasmtime:
 ```bash
-wasmtime run --wasi preview2 target/wasm32-wasip2/release/heyreach_client.wasm
+wasmtime run --wasi preview2 target/wasm32-wasip2/release/heyreach_api.wasm
 ```
 
 ## License
